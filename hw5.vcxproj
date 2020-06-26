@@ -139,13 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\hw5_FIFO_SISO_BIBO\.vs\hw5_FIFO_SISO_BIBO\func.cpp" />
-    <ClCompile Include="..\hw5_FIFO_SISO_BIBO\.vs\hw5_FIFO_SISO_BIBO\main.cpp" />
-    <ClCompile Include="..\hw5_FIFO_SISO_BIBO\.vs\hw5_FIFO_SISO_BIBO\polynom.cpp" />
+    <ClCompile Include="func.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="polynom.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\hw5_FIFO_SISO_BIBO\.vs\hw5_FIFO_SISO_BIBO\func.h" />
-    <ClInclude Include="..\hw5_FIFO_SISO_BIBO\.vs\hw5_FIFO_SISO_BIBO\polynom.h" />
+    <ClInclude Include="func.h" />
+    <ClInclude Include="polynom.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,21 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\hw5_FIFO_SISO_BIBO\.vs\hw5_FIFO_SISO_BIBO\polynom.cpp">
+    <ClCompile Include="func.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\hw5_FIFO_SISO_BIBO\.vs\hw5_FIFO_SISO_BIBO\func.cpp">
+    <ClCompile Include="polynom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\hw5_FIFO_SISO_BIBO\.vs\hw5_FIFO_SISO_BIBO\main.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\hw5_FIFO_SISO_BIBO\.vs\hw5_FIFO_SISO_BIBO\func.h">
+    <ClInclude Include="func.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\hw5_FIFO_SISO_BIBO\.vs\hw5_FIFO_SISO_BIBO\polynom.h">
+    <ClInclude Include="polynom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

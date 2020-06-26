@@ -19,8 +19,8 @@ protected:
   void plot(ostream& os) const ; //plot fmap_
 
 public:
-    func& operator<<(const int& x);
-    ostream& operator<<(ostream&, const func&);
+    virtual func& operator<<(const int& x) = 0;
+    virtual ostream& operator<<(ostream&, const func&) = 0;
 };
 
 

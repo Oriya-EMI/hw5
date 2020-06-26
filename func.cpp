@@ -1,13 +1,5 @@
 #include "func.h"
 
-func& func::operator<<(const int& x) {
-
-
-}
-ostream& func::operator<<(ostream&, const func&) {
-
-
-}
 
 void func::plot(ostream& os) const {
  

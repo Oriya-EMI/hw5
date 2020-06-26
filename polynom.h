@@ -8,11 +8,15 @@ using namespace std;
 
 class polynom : public func {
  public:
-     void polynom(int, int*);
+     polynom(int, int*); 
+     //~polynom();
      void printcoefs(ostream&)  const ;
-     friend polynom operator+(const polynom&, const polynom&);
-     friend polynom operator-(const polynom&, const polynom&);
-     friend polynom operator*(const polynom&, const polynom&);
+     polynom operator+(const polynom&) const;
+     polynom operator-(const polynom&) const;
+     polynom operator*(const polynom&) const;
+
+     virtual func& operator<<(const int& x);
+     virtual ostream& operator<<(ostream&, const func&);
 
  protected:
 

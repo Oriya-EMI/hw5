@@ -1,14 +1,34 @@
 #include "polynom.h"
 
-void polynom::polynom(int n, int* coefs) {
+polynom::polynom(int n, int* coefs) {
     n_ = n;
     coefs_ = coefs;
 }
 
-polynom polynom::operator+(const polynom& f1, const polynom& f2) {
+func& polynom::operator<<(const int& x) {
+
+}
+
+ostream& polynom::operator<<(ostream&, const func&) {
+
+}
+
+polynom polynom::operator+(const polynom& f2) const {
+    f1 = this;
     //save the two polynoms as the max degree polynom and the min degree polynom.
-    polynom min_deg_polynom = f1 if f1.n > f2.n else f2;
-    polynom max_deg_polynom = f1 if f1.n > f2.n else f2;
+    if (f1.n_ > f2.n_) {
+        polynom min_deg_polynom = f2;
+    }
+    else {
+        polynom min_deg_polynom = f1;
+    }
+    if (f1.n_ == min_deg_polynom.n_) {
+        polynom max_deg_polynom = f2;
+    }
+    else {
+        polynom max_deg_polynom = f1;
+    }
+
 
     //save variabls for readability
     int min_deg = min_deg_polynom.n;
@@ -16,8 +36,8 @@ polynom polynom::operator+(const polynom& f1, const polynom& f2) {
 
     //create the new polynom coefs and degree
     int new_polynom_deg = max_deg;
-    int* [new_polynom_deg] new_coefs;
-
+    new_coefs = new int[new_polynom_deg];
+=
     // as long as the polynoms have the same degree - add thier coefs
     for (int i = 0; i < min_deg; i++) {
         new_coefs[i] = f1.coefs_[i] + f2.coefs_[i];
@@ -37,9 +57,20 @@ polynom polynom::operator+(const polynom& f1, const polynom& f2) {
     return polynom(new_polynom_deg, new_coefs)
 }
 
-polynom polynom::operator-(const polynom& f1, const polynom& f2) {
-    polynom min_deg_polynom = f1 if f1.n > f2.n else f2;
-    polynom max_deg_polynom = f1 if f1.n <= f2.n else f2;
+polynom polynom::operator-( const polynom& f2) const {
+    f1 = this;
+    if (f1.n_ > f2.n_) {
+        polynom min_deg_polynom = f2;
+    }
+    else {
+        polynom min_deg_polynom = f1;
+    }
+    if (f1.n_ == min_deg_polynom.n_) {
+        polynom max_deg_polynom = f2;
+    }
+    else {
+        polynom max_deg_polynom = f1;
+    }
 
     //save variabls for readability
     int min_deg = min_deg_polynom.n;
@@ -71,7 +102,8 @@ polynom polynom::operator-(const polynom& f1, const polynom& f2) {
 }
 
 
-polynom polynom::operator*(const polynom& f1, const polynom& f2) {
+polynom polynom::operator*(const polynom& f2) const {
+    f1 = this;
     int temp_n = f1.n * f2.n;
     int* [temp_n] temp_coefs;
 
