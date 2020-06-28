@@ -3,20 +3,21 @@
 
 #include "func.h"
 
-using namespace std;
-
 
 class polynom : public func {
  public:
+     polynom();
      polynom(int, int*); 
-     //~polynom();
      void printcoefs(ostream&)  const ;
      polynom operator+(const polynom&) const;
      polynom operator-(const polynom&) const;
      polynom operator*(const polynom&) const;
+     polynom Derivative() const;
+     polynom Integral() const;
 
      virtual func& operator<<(const int& x);
-     virtual ostream& operator<<(ostream&, const func&);
+     virtual void print(ostream&) const;
+     virtual int solve(const int& x);
 
  protected:
 

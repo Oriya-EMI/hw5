@@ -1,16 +1,21 @@
 #include "func.h"
 
+ostream& func::operator<<(ostream& output, const func& f) {
+    print(output);
+    return output;
+}
 
 void func::plot(ostream& os) const {
- 
+   
   vector<int> sortImage;
     
   sortImage.clear();
   for ( auto it : fmap_){
-    //complete code here: insert the image of the function into sortImage 
+      sortImage.push_back(it.second);
   }
-  //complete code here: sort sortImage
-  //complete code here: flip sortImage (reverse)
+
+  sort(sortImage.begin(), sortImage.end());
+  sortImage.reserve;
   
   for ( auto it_im = sortImage.begin();
        it_im != sortImage.end(); ++it_im) {
@@ -31,7 +36,7 @@ void func::plot(ostream& os) const {
       else 
 	os<<"  "<<*it_im;
     
-    for (auto it_dom /*complete code here: loop over map*/) {
+    for (auto it_dom :fmap_) {
       if(it_dom.second == *it_im){
 	int x=it_dom.first;
 	int spaces= x-x_anchor;
@@ -59,7 +64,7 @@ void func::plot(ostream& os) const {
 	    os<<" "<<*it_im-i;
 	  else 
 	    os<<"  "<<*it_im-i;
-	cout<<endl;
+	std::cout<<std::endl;
 	i++;
 
       }

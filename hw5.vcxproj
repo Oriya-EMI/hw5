@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="compfunc.cpp" />
     <ClCompile Include="func.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="polynom.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="compfunc.h" />
     <ClInclude Include="func.h" />
     <ClInclude Include="polynom.h" />
   </ItemGroup>
