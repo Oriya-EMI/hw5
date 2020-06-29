@@ -1,7 +1,9 @@
 #include "func.h"
 
-ostream& func::operator<<(ostream& output, const func& f) {
-    print(output);
+
+ostream& operator<<(ostream& output, const func& f)
+{
+    f.print(output);
     return output;
 }
 
@@ -15,8 +17,8 @@ void func::plot(ostream& os) const {
   }
 
   sort(sortImage.begin(), sortImage.end());
-  sortImage.reserve;
-  
+  reverse(sortImage.begin(), sortImage.end());
+
   for ( auto it_im = sortImage.begin();
        it_im != sortImage.end(); ++it_im) {
     if(it_im!=sortImage.begin() && *it_im==*(it_im-1)){ //remove repeated

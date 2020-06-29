@@ -26,7 +26,8 @@ protected:
 public:
 
     virtual func& operator<<(const int& x) = 0;
-    friend ostream& operator<<(ostream&, const func&);
+    friend ostream& operator<<(ostream&, const func& f);
+
     virtual void print(ostream&) const = 0;
 
     virtual int solve(const int& x) = 0;

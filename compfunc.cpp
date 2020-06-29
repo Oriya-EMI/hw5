@@ -1,23 +1,29 @@
 #include"compfunc.h"
+#include"polynom.h"
 
-compfunc::compfunc(const func& f1, const func& f2) {
-	dynamic_cast()
-	func f2 = f2;
-	minVal_ = 0;
-	maxVal_ = 0;
-	map<int, int> fmap_;
-	first_value = true;
-}
+compfunc::compfunc(func& q, func& p) : f1(&q), f2(&p) {}
+
 
 func& compfunc::operator<<(const int& x) {
-	int ineer_value = solve(x);
-	int value = solve(ineer_value);
+	int value = solve(x);
+	fmap_.insert(x, value);
+
+	if (first_value) {
+		minVal_ = x;
+		maxVal_ = x;
+	}
+	else {
+		minVal_ = x < minVal_ ? x : minVal_;
+		maxVal_ = x > maxVal_ ? x : maxVal_;
+	}
 }
 
-func& compfunc::print(ostream&) {
-
+void compfunc::print(ostream& output) const {
+	output << endl;
+	f2->print(output);
 }
 
-func& compfunc::solve(const int& x) {
-
+int compfunc::solve(const int& x) const {
+	int ineer_value = f1->solve(x);
+	return f2->solve(ineer_value);
 }
