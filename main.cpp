@@ -11,8 +11,6 @@ using namespace std;
 
 const int MAXLINE = 256;
 
-
-
 int main() {
   
    map<string,func*> func_list;
@@ -38,9 +36,8 @@ int main() {
       coefs= new int[order+1];
     
       for(auto i=0; i<=order && token; i++) {
-	coefs[i] = atof(token);
-	token = strtok(NULL, ",");
-
+	    coefs[i] = atof(token);
+	    token = strtok(NULL, ",");
       }
       func_list[func_name]=new polynom(order,coefs);
 

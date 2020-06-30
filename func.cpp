@@ -1,5 +1,7 @@
 #include "func.h"
 
+func::func() { fmap_.clear(); }
+func::~func() {}
 
 ostream& operator<<(ostream& output, const func& f)
 {

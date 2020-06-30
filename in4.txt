@@ -1,0 +1,4 @@
+SetPolynom p 2,1,0,1
+SetPolynom q 2,1,0,-2
+MathPolynom f p,+,p
+Print f

@@ -8,6 +8,8 @@ class polynom : public func {
  public:
      polynom();
      polynom(int, int*); 
+     polynom(const polynom&);
+     ~polynom();
      void printcoefs(ostream&)  const ;
      polynom operator+(const polynom&) const;
      polynom operator-(const polynom&) const;

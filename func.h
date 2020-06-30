@@ -1,11 +1,11 @@
-#ifndef _F
-#define _F
+#ifndef _F1
+#define _F1
 #include <map>
 #include <iostream>
-#include<math.h>
-#include<vector>
-#include<algorithm>
-#include<string>
+#include <math.h>
+#include <vector>
+#include <algorithm>
+#include <string>
 
 using std::map;
 using std::ostream;
@@ -24,7 +24,8 @@ protected:
     void plot(ostream& os) const ; //plot fmap_
 
 public:
-
+    func();
+    virtual ~func();
     virtual func& operator<<(const int& x) = 0;
     friend ostream& operator<<(ostream&, const func& f);
 
